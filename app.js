@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.get('/',(req,res)=>{
-    res.send("works");
+    res.send("It works");
 });
 
 app.listen(60118, console.log("Server running"));
