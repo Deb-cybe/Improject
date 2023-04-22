@@ -19,7 +19,8 @@ app.get('/',(req,res)=>{
     res.json({ message: "Hello from server!" });
 });
 app.post('/setname',async(req,res)=>{
-    const name=new NamesModel(req.body);
+    // const name=new NamesModel(req.body);
+    const name=new NamesModel({"name":"json"});
     try{
         const newName=await name.save();
         res.status(201).json({newName});
