@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/',(req,res)=>{
-    res.send("It works");
+    res.json({ message: "Hello from server!" });
 });
 app.get('/news',(req,res)=>{
     res.send("News Page");
